@@ -1,0 +1,198 @@
+<?php
+include "include.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kang G</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="script.js" defer="defer"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div id="logo" onclick="location.href='index.php'">
+            <img src="img/logo.png">
+        </div>
+        <!-- 유저메뉴 -->
+        <div id="usmenu_wrap">
+            <?php if(!isset($_SESSION["id"])){ ?>
+                <ul class="usmenu">
+                    <li onclick="location.href='login.php'">Login</li>
+                    <li onclick="location.href='signup.php'">SignUp</li>
+                    <li onclick="location.href='idpw.php'">ID/PW</li>
+                </ul>
+            <?php } else{?>
+                <ul class="usmenu">
+                    <li onclick="location.href='logout.php'">Logout</li>
+                    <li onclick="location.href='member_edit.php'">회원정보수정</li>
+                    <li onclick="member_del()">탈퇴하기</li>
+                </ul>
+                <!-- 탈퇴 스크립트 -->
+                <script>
+                    function member_del(){
+                        if(confirm("정말로 탈퇴 하시겠습니까?")){
+                            location.href="member_del.php?usid=<?php echo $_SESSION["id"]?>"
+                        }
+                    }
+                </script>
+                <!-- 탈퇴 스크립트 끝 -->
+            <?php }?>
+        </div>
+        <!-- 유저메뉴 끝 -->
+        <div id="header_wrap">
+            <ul class="menu">
+                <li onclick="location.href='index.php'">Home</li>
+                <li onclick="location.href='greet.php'">About Me</li>
+                <li onclick="location.href='notice.php'">Board</li>
+                <li onclick="location.href='guest.php'">Guest</li>
+            </ul>
+        </div>
+    </header>
+    <!-- 헤더끝 -->
+    <!-- 본문 시작 -->
+    <div id="member_edit_wrap">
+        <div id="member_edit_title">
+            <div class="member_edit_ani">
+                <img src="img/sheji.png">
+            </div> 
+            회원 정보 수정
+            <br>
+            <p>안녕하세요. 어서오세요. 감사합니다.</p>
+        </div>
+        <!-- 회원 정보 수정 컨텐츠 -->
+        <div id="member_edit_content">
+            <table class="member_edit_table">
+                <!-- 아이디 -->
+                <tr>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">ID</div>
+                            <input type="text" name="usid" class="login_bar" required placeholder="아이디를 입력하세요.">
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <!-- 이름 이메일 -->
+                <tr>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">이름</div>
+                            <input type="text" name="usname" class="login_bar" required placeholder="이름을 입력하세요.">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">E-mail</div>
+                            <input type="text" name="usemail" class="login_bar" required placeholder="이메일을 입력하세요.">
+                        </div>
+                    </td>
+                </tr>
+                <!-- 비밀번호 확인 -->
+                <tr>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">Password</div>
+                            <input type="password" name="uspw" class="login_bar" required placeholder="비밀번호를 입력하세요.">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">Password</div>
+                            <input type="password" name="uspw" class="login_bar" required placeholder="비밀번호를 입력하세요.">
+                        </div>
+                    </td>
+                </tr>
+                <!-- 비밀번호 확인 버튼 -->
+                <tr>
+                    <td colspan="2">
+                        <div class="member_edit_bt">비밀번호 재확인</div>
+                        <input type="hidden" name="idok">
+                    </td>
+                </tr>
+                <!-- 생일 성별 -->
+                <tr>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">생일</div>
+                            <input type="date" name="usbd" required class="signup_date">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">성별</div>
+                            <div class="signup_gender">
+                                <input type="radio" value="남성" required name="gender">남성
+                                <input type="radio" value="여성" required name="gender">여성
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- 학력 취미 -->
+                <tr>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">학력<span style="font-size:small">(선택)</span></div>
+                            <select name="grade" class="signup_grade">
+                                <option value="초졸">초졸</option>
+                                <option value="중졸">중졸</option>
+                                <option value="고졸">고졸</option>
+                                <option value="대졸">대졸</option>
+                                <option value="대학원졸">대학원졸</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="login_box">
+                            <div class="login_text">취미<span style="font-size:small">(선택)</span></div>
+                            <div class="signup_hobby">
+                                <input type="checkbox" name="hobby[]" value="낚시">낚시&ensp;
+                                <input type="checkbox" name="hobby[]" value="운동">운동&ensp;
+                                <input type="checkbox" name="hobby[]" value="등산">등산&ensp;
+                                <input type="checkbox" name="hobby[]" value="영화보기">영화보기&ensp;
+                                <input type="checkbox" name="hobby[]" value="음악감상">음악감상&ensp;
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- 남기는 말 -->
+                <tr>
+                    <td colspan="2">
+                        <div class="login_box" style="height: 140px;width:1030px">
+                            <div class="login_text" style="width: 200px;">남기는말<span style="font-size:small">(선택)</span></div>
+                            <textarea cols="1000" rows="10" name="memo"style="width:900px" class="signup_memo" placeholder="남기시는 말을 작성해 주세요."></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <!-- 리셋 수정하기 버튼  -->
+                <tr>
+                    <td colspan="2">
+                    <input type="reset" value="다시작성" class="signup_bt" style="background-color: crimson;float: left;">
+                    <input type="button" value="수정하기" class="signup_bt" onclick="signup()" style="float: right;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 회원 정보 수정 컨텐츠 끝 -->
+    </div>
+    <!-- 본문 끝 -->
+    <!-- 푸터 -->
+    <footer>
+        <div id="footer_wrap">
+            All rights reserved by Jeeyeun Kang<br>
+            responsible site since 2021.09.30
+        </div>
+    </footer>
+    <!-- 푸터끝 -->
+</body>
+</html>

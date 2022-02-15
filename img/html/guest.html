@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to kang-g homepage!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li><a href="index.php"><img src="images/logo.png" style="width: 50px;height: 50px;"></a></li>
+            <li><a href="notice.php">Notice</a></li>
+            <li><a href="board.php">Board</a></li>
+            <li><a href="guest.php">Guest</a></li>
+            <li><a href="qna.php">QnA</a></li>
+            <li><a href="inc.php">Inc</a></li>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li>+
+                <?php if(!isset($_SESSION["id"])){?>
+                <ul class="nav2">
+                    <li onclick="location.href='login.html'">Login</li>
+                    <li onclick="location.href='signup.html'">SignUp</li>
+                    <li onclick="location.href='idpw.html'">ID/PW</li>
+                 </ul>
+                <?php }else{ ?>
+                <ul class="nav2">
+                    <li onclick="location.href='logout.php'">Logout</li>
+                    <li onclick="location.href='edit_check.php'">Edit</li>
+                    <li onclick="del()">탈퇴하기</li>
+                    <script>
+                        function del(){
+                           if(confirm("정말로 탈퇴 하시겠습니까?")){
+                            location.href="del.php"}
+                        }
+                    </script>
+                </ul>
+                <?php }?>   
+            </li>
+             </ul>
+    </header>
+    <div id="box3">
+        <div class="i0">
+            <p class="i1">고객 지원</p>
+            <ul class=i2>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="board.html">Board</a></li>
+                <li><a href="inc.html">Inc</a></li>
+                <li><a href="guest.html">Guest ▼</a></li>
+                <li><a href="qna.html">Q&A</a></li>
+                
+            </ul>
+        </div>
+     </div>
+    <section>
+    <div class="g4">
+            <br>
+            <h1>방명록</h1>
+            <br>
+            <br>
+            <hr>
+    </div>
+    <div id="guest">
+       <div class="guesttext">
+           <div class="guest0">
+               <form name="guest1" method="POST" action="guest_ok.html">
+                 <textarea cols="1000" rows="10"  name="guesttext"
+                 placeholder="leave your message here!
+                    thx:)"
+                 class="guest1"></textarea>
+                <input type="reset" value="다시쓰기" class="guest2">
+                <input type="button" value="작성" class="guest3" onclick="send()">
+                </form>
+            </div>
+       </div>
+       <div class="guestarea">
+           <table class="guestarea2">
+               <tr>
+                   <td>작성자</td>
+                   <td>내용</td>
+                   <td>작성일</td>
+               </tr>
+               <tr>
+                    <td>홍길동</td>
+                    <td>안녕하세요 만나서 반갑습니다.</td>
+                    <td>2021-10-01</td>
+                </tr>
+                <tr class="anser">
+                    <td colspan="3">
+                    <img src="images/anser.png" style="width: 30px;height: 30px;margin-right: 30px;"> 안녕하세요~
+                    </td>
+                </tr>
+                <tr>
+                    <td>영희</td>
+                    <td>무궁화 꽃이 피었습니다.</td>
+                    <td>2021-10-02</td>
+                </tr>
+                <tr class="anser">
+                    <td colspan="3">
+                        <img src="images/anser.png" style="width: 30px;height: 30px;margin-right: 30px;">   으악 나죽었어?
+                    </td>
+                </tr>
+                <tr>
+                    <td>넷플릭스</td>
+                    <td>오징어게임 너무 재미있어~</td>
+                    <td>2021-10-02</td>
+                </tr>
+                <tr class="anser">
+                    <td colspan="3">
+                        <img src="images/anser.png" style="width: 30px;height: 30px;margin-right: 30px;">   ○△□오징어게임에 오신것을 환영합니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td>일남</td>
+                    <td>우리는 깐부 잖어~</td>
+                    <td>2021-10-03</td>
+                </tr>
+                <tr class="anser">
+                    <td colspan="3">
+                        <img src="images/anser.png" style="width: 30px;height: 30px;margin-right: 30px;">    내가 뭐라고 그랬지?짝?홀??
+                    </td>
+                </tr>
+           </table>
+           <div class="more">
+               <input type="button" value="more" class="moreb"></div>
+        </div>
+        
+        </div>
+    </div>
+    </section>
+    <div id="fix">
+        <ul class="fix">
+            <li><p style="font-weight: bold;text-align: center;font-size: 1.2em;">How to Contact <span style="color: goldenrod;">Kang-G</span></p></li>
+            <a href="https://www.facebook.com" target="_blank"><li><img src="images/facebook.png"></li></a>
+            <a href="https://www.instagram.com" target="_blank"><li><img src="images/insta.png"></li></a>
+            <a href="https://twitter.com" target="_blank"><li><img src="images/twitter.png"></li></a>
+            <a href="https://www.youtube.com" target="_blank"><li><img src="images/youtube.png"></li></a>
+            <a href="http://blog.naver.com" target="_blank"><li><img src="images/naver.png"></li></a>
+        </ul>
+    </div>
+    <footer>
+        <div class="ft">
+        <div class="ft1">
+            <h3>Login</h3>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="idpw.html">ID/PW</a></li>
+            </ul>
+        </div>
+        <div class="ft1">
+            <h3>Menu</h3>
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="notice.html">Notice</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="guest.html">Guest</a></li>
+            <li><a href="qna.html">QnA</a></li>
+            <li><a href="inc.html">Inc</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        </div>
+        <div class="ft2">
+            <h3>About Me</h3>
+            <ul>
+                <li><a href="greet.html">Greet</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="photo.html">Photo</a></li>
+            </ul>
+        </div>
+            <div class="ft3">
+                All rights reserved by Jeeyeun Kang <br>
+                responsible site since 2021.09.30<br>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
+<script>
+    function send(){
+        if(guest1.guesttext.value==""){alert("내용을 입력하세요");guest1.guesttext.focus();return false;}
+        document.guest1.submit();
+    }
+</script>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="script.js" defer="defer"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div id="logo" onclick="location.href='index.php'">
+            <img src="img/logo.png">
+        </div>
+        <div id="usmenu_wrap">
+            <ul class="usmenu">
+                <li onclick="location.href='login.php'">Login</li>
+                <li onclick="location.href='signup.php'">SignUp</li>
+                <li onclick="location.href='idpw.php'">ID/PW</li>
+            </ul>
+        </div>
+        <div id="header_wrap">
+            <ul class="menu">
+                <li onclick="location.href='index.php'">Home</li>
+                <li onclick="location.href='greet.php'">About Me</li>
+                <li onclick="location.href='notice.php'">Board</li>
+                <li onclick="location.href='guest.php'">Guest</li>
+            </ul>
+        </div>
+    </header>
+    <!-- 헤더끝 -->
+    <!-- 본문 시작 -->
+    <div id="wrap">
+        <!-- 프로필 시작-->
+        <div id="profile">
+            <div class="profile_wrap">
+                <div class="profile_photo">
+                    <img src="img/2020.JPG">
+                </div>
+                <div class="profile_text">
+                    Hi~!
+                    <br> My name is 
+                    <Br><span style="font-size: 1.5em;font-family: 'Lobster', cursive;">Kang Jee Yeun</span>
+                </div>
+                <div class="profile_sns">
+                    <ul class="profile_sns_bt">
+                        <li><img src="img/facebook.png"></li>
+                        <li><img src="img/insta.png"></li>
+                        <li><img src="img/naver.png"></li>
+                    </ul>
+                </div>
+                <div class="profile_bt">
+                    <ul class="profile_fast_bt">
+                        <li>Greet</li>
+                        <li>Introduce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 프로필 끝 -->
+        <!-- 컨텐츠 (공지사항/게시판/자료실/qna/사진첩 )시작 -->
+        <div id="content_wrap">
+            <!-- 공지사항 시작 -->
+            <div class="content_box">
+                <h1><span style="color: seagreen;">N</span>otice<div class="more">+</div></h1>
+                <table class="index_notice_table">
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 첫번째 공지사항 입니다.</td>
+                        <td>2020-12-09</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 두번째 공지사항 입니다.</td>
+                        <td>2020-12-10</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 세번째 공지사항 입니다.</td>
+                        <td>2020-12-11</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 네번째 공지사항 입니다.</td>
+                        <td>2020-12-12</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 다섯번째 공지사항 입니다.</td>
+                        <td>2020-12-13</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 공지사항 끝 -->
+            <!-- 게시판 시작 -->
+            <div class="content_box">
+                <h1><span style="color: seagreen;">B</span>oard<div class="more">+</div></h1>
+                <table class="index_notice_table">
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 첫번째 게시물 입니다.</td>
+                        <td>2020-12-09</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 두번째 게시물 입니다.</td>
+                        <td>2020-12-10</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 세번째 게시물 입니다.</td>
+                        <td>2020-12-11</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 네번째 게시물 입니다.</td>
+                        <td>2020-12-12</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: seagreen;">&#9722;</span> 다섯번째 게시물 입니다.</td>
+                        <td>2020-12-13</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 게시판 끝 -->
+            <!-- 자료실 시작-->
+            <div class="content_box" style="width: 190px;">
+                <h1><span style="color: seagreen;">I</span>NC<div class="more">+</div></h1>
+            </div>
+            <!-- 자료실 끝 -->
+            <!-- qna 시작 -->
+            <div class="content_box">
+                <h1><span style="color: seagreen;">Q</span>&A<div class="more">+</div></h1>
+                <table class="index_qna_table">
+                    <tr>
+                        <td>질문 글 입니다</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: crimson;">&#8627;</span>&ensp;답글 입니다</td>
+                    </tr><tr>
+                        <td>질문 글 입니다</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: crimson;">&#8627;</span>&ensp;답글 입니다</td>
+                    </tr>
+                    <tr>
+                        <td>질문 글 입니다</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: crimson;">&#8627;</span>&ensp;답글 입니다</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- qna 끝 -->
+            <!-- 사진첩 시작 -->
+            <div class="content_box" style="width: 190px;">
+                <h1><span style="color: seagreen;">P</span>hoto<div class="more">+</div></h1>
+                <div class="index_photo_img">
+                    <img src="img/2014.jpeg">
+                    <img src="img/2015.jpeg">
+                    <img src="img/2017.jpeg">
+                    <img src="img/2021.jpeg">
+                </div>
+            </div>
+            <!-- 사진첩 끝 -->
+        </div>
+        <!-- 컨텐츠 끝 -->
+        <!-- 컨텐츠(포토폴리오,sns,유튜브)시작 -->
+        <div id="content_wrap2">
+            <!-- 유튜브 시작 -->
+            <div class="content_box2">
+                <iframe width="455" height="250" src="https://www.youtube.com/embed/d8Yad0bmaPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="content_box2">
+                <iframe width="455" height="250" src="https://www.youtube.com/embed/LLfhY4eVwDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- 유튜브 끝 -->
+            <!-- 포토폴리오 시작 -->
+            <div class="content_box2">
+                <h1><span style="color: seagreen;">P</span>ortfolio<div class="more">+</div></h1>
+            </div>
+            <!-- 포토폴리오 끝 -->
+            <!-- sns 시작 -->
+            <div class="content_box3">
+                <h1><span style="color: #3b5998;">F</span>aceBook</h1>
+                <div class="sns_ani">
+                    <a href="https://www.facebook.com" target="_blank"><img src="img/ffacebook.png"></a>
+                </div>
+            </div>
+            <div class="content_box3">
+                <h1><span style="color: #8b00ff;">I</span>nstagram</h1>
+                <div class="sns_ani">
+                    <a href="https://www.instagram.com" target="_blank"><img src="img/iinsta.png"></a>
+                </div>
+            </div>
+            <div class="content_box3">
+                <h1><span style="color: #00acee;">T</span>witter</h1>
+                <div class="sns_ani">
+                    <a href="https://twitter.com" target="_blank"><img src="img/twitter.png"></a>
+                </div>
+            </div>
+            <div class="content_box3">
+                <h1><span style="color: #c4302b;">Y</span>outube</h1>
+                <div class="sns_ani">
+                    <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.png"></a>
+                </div>
+            </div>
+            <div class="content_box3">
+                <h1><span style="color: #1ec800;">N</span>aver blog</h1>
+                <div class="sns_ani">
+                    <a href="http://blog.naver.com" target="_blank"><img src="img/nnaver.png"></a>
+                </div>
+            </div>
+            <!-- sns 끝 -->
+        </div>
+        <!-- 컨텐츠 끝 -->
+    </div>
+    <!-- 본문 끝 -->
+    <!-- 푸터 -->
+    <footer>
+        <div id="footer_wrap">
+            All rights reserved by Jeeyeun Kang<br>
+            responsible site since 2021.09.30
+        </div>
+    </footer>
+    <!-- 푸터끝 -->
+</body>
+</html>

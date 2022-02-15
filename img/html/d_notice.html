@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to kang-g homepage!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="d_style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li><a href="index.html"><img src="images/logo.png" style="width: 50px;height: 50px;"></a></li>
+            <li><a href="notice.html">Notice</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="guest.html">Guest</a></li>
+            <li><a href="qna.html">QnA</a></li>
+            <li><a href="inc.html">Inc</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>+
+                <ul class="nav2">
+                    <li onclick="location.href='login.html'">Login</li>
+                    <li onclick="location.href='signup.html'">SignUp</li>
+                    <li onclick="location.href='idpw.html'">ID/PW</li>
+                    </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="box3">
+        <div class="i0">
+            <p class="i1">고객 지원</p>
+            <ul class=i2>
+                <li><a href="notice.html">Notice ▼</a></li>
+                <li><a href="board.html">Board</a></li>
+                <li><a href="inc.html">Inc</a></li>
+                <li><a href="guest.html">Guest</a></li>
+                <li><a href="qna.html">Q&A</a></li>
+                
+            </ul>
+        </div>
+     </div>
+    <section>
+    <div class="g4">
+            <br>
+            <h1>공지사항</h1>
+            <br>
+            <br>
+            <hr>
+            <div class="i4">
+            <form name="form4" action="notice.html" method="POST">
+            <h3><span style="color:#a7866c;font-size: small;">■</span> 주제 검색하기</h3>
+            <input type="search" placeholder="검색어를 입력해 주세요." 
+            class="i5" name="search"
+                style="width: 600px;height: 50px;font-size: large;float: right;">
+                <img src="images/search.png" onclick="send()" class="searchimg">
+            </div>
+            </form>
+            
+    </div>
+    <div id="notice">
+        <table class="i3">
+            <tr>
+                <td>번호</td>
+                <td>제목</td>
+                <td>일자</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>첫번째 공지사항입니다.</td>
+                <td>2021-10-01</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>두번째 공지사항입니다.</td>
+                <td>2021-10-01</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>세번째 공지사항입니다.</td>
+                <td>2021-10-02</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>네번째 공지사항입니다.</td>
+                <td>2021-10-03</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>다섯번째 공지사항입니다.</td>
+                <td>2021-10-04</td>
+            </tr>
+           </table>
+           <div class="i6">
+                <p>< &ensp; 1 &ensp; ></p>
+                <input type="button" class="i7" value="Add Notice" 
+                style="width:100px;height: 30px;
+                background-color: #7788998a;border-radius: 30px;
+                color: white;float: right;" onclick="location.href='notice_write.html'">
+           </div>
+    </div>
+    </section>
+    <div id="fix">
+        <ul class="fix">
+            <li><p style="font-weight: bold;text-align: center;font-size: 1.2em;">How to Contact <span style="color: goldenrod;">Kang-G</span></p></li>
+            <a href="https://www.facebook.com" target="_blank"><li><img src="images/facebook.png"></li></a>
+            <a href="https://www.instagram.com" target="_blank"><li><img src="images/insta.png"></li></a>
+            <a href="https://twitter.com" target="_blank"><li><img src="images/twitter.png"></li></a>
+            <a href="https://www.youtube.com" target="_blank"><li><img src="images/youtube.png"></li></a>
+            <a href="http://blog.naver.com" target="_blank"><li><img src="images/naver.png"></li></a>
+        </ul>
+    </div>
+    <footer>
+        <div class="ft">
+        <div class="ft1">
+            <h3>Login</h3>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="idpw.html">ID/PW</a></li>
+            </ul>
+        </div>
+        <div class="ft1">
+            <h3>Menu</h3>
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="notice.html">Notice</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="guest.html">Guest</a></li>
+            <li><a href="qna.html">QnA</a></li>
+            <li><a href="inc.html">Inc</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        </div>
+        <div class="ft2">
+            <h3>About Me</h3>
+            <ul>
+                <li><a href="greet.html">Greet</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="photo.html">Photo</a></li>
+            </ul>
+        </div>
+            <div class="ft3">
+                All rights reserved by Jeeyeun Kang <br>
+                responsible site since 2021.09.30<br>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
+<script>
+    function send(){
+        if(form4.search.value==""){alert("검색 할 내용을 입력하세요");form4.search.focus();return false;}
+        document.form4.submit();
+    }
+</script>
